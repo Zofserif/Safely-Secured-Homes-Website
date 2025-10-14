@@ -24,11 +24,11 @@
     <link rel="icon" type="image/png" sizes="16x17" href="assets/img/Logo/Favicon/Faveicon%2032x32.png?h=fe50d6c0856bfed73085ad751e8b2874">
     <link rel="icon" type="image/png" sizes="16x17" href="assets/img/Logo/Favicon/Faveicon%2032x32.png?h=fe50d6c0856bfed73085ad751e8b2874" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=2b9089ac3d02cc1e1b2f6684859260ec">
-    <link rel="stylesheet" href="assets/css/Raleway.css?h=696b8f0832a441d54e127c7c85772daf">
+    <link rel="stylesheet" href="assets/css/Raleway.css?h=d85c9a3f3c0a66456fd60a01207499d4">
     <link rel="stylesheet" href="assets/css/bss-overrides.css?h=9dc6ec85e8aa51fb1213d2ff929019eb">
     <link rel="stylesheet" href="assets/css/aos.min.css?h=ea67d3638a91cd05d22f1b4e31c7b746">
     <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
-    <link rel="stylesheet" href="assets/css/Inline-List-wLinks.css?h=23c7584db4ac0489c67c1f35283a3b96">
+    <link rel="stylesheet" href="assets/css/validation-form.css?h=d24997260d47d48aed4a6a559838294f">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                 <div class="col-md-6" style="width: 600px;">
                     <div>
                         <!-- Start: FORM AREA -->
-                        <form class="p-3 p-xl-4" data-bs-theme="light" data-bss-recipient="775aee6d493e23e8a1198b43341b02bb">
+                        <form class="p-3 p-xl-4" id="myForm" data-bs-theme="light" data-bss-recipient="775aee6d493e23e8a1198b43341b02bb">
                             <!-- Start: SECTION 1 -->
                             <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1350" data-aos-once="true">
                                 <!-- Start: SECTION 1 -->
@@ -63,25 +63,26 @@
                                     <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">To provide you with the best plan, may we know your name?</p><!-- Start: Full Name -->
                                     <div class="text-start">
                                         <!-- Start: First Name -->
-                                        <div class="d-inline-block w-50 ps-2 pe-2"><input class="rounded-4 shadow form-control" type="text" id="firstName" placeholder="First Name" name="Homeowner's First Name" required="" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s'-]" title="enter full name"></div><!-- End: First Name -->
+                                        <div class="d-inline-block w-50 ps-2 pe-2 invalid-feedback"><input class="rounded-4 shadow form-control js-name" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="firstName" placeholder="First Name" name="Homeowner's First Name" required="" minlength="2" maxlength="40" title="Please enter your first name" data-bs-trigger="manual" pattern="^[A-Za-z]+(?:[ '-][A-Za-z]+)*$"></div><!-- End: First Name -->
                                         <!-- Start: Last Name -->
-                                        <div class="d-inline-block ps-2 pe-2"><input class="rounded-4 shadow form-control" type="text" id="lastName" placeholder="Last Name" name="Homeowner'ßs Last Name" required="" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s'-]" title="enter full name"></div><!-- End: Last Name -->
+                                        <div class="d-inline-block ps-2 pe-2"><input class="rounded-4 shadow form-control js-name" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="lastName" placeholder="Last Name" name="Homeowner's Last Name" required="" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s'-]" title="Please enter your last name" data-bs-trigger="focus"></div><!-- End: Last Name -->
                                     </div><!-- End: Full Name -->
                                 </div><!-- End: Name Input -->
                                 <!-- Start: Type of Home -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which best describes your home situation?</p><select class="rounded-4 shadow form-select" id="homeType" required="" name="Type of House to work with">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which best describes your home situation?</p><select class="rounded-4 shadow form-select" id="homeType" required="" name="Type of House to work with" title="Please select an option" data-bs-trigger="manual">
                                         <option value="" selected="">Please select and option</option>
-                                        <option value="1">Quiet neighborhood with distant neighbors</option>
+                                        <option value="1">Condominium or apartment</option>
                                         <option value="2">Busy area with high foot traffic</option>
-                                        <option value="3">Private, secluded property</option>
-                                        <option value="4">Condominium or apartment</option>
-                                        <option value="5">Gated community/subdivision</option>
+                                        <option value="3">Quiet neighborhood with distant neighbors</option>
+                                        <option value="4">Gated community/subdivision</option>
+                                        <option value="5">Private, secluded property</option>
+                                        <option value="6">Resthouse/ Villa</option>
                                     </select>
                                 </div><!-- End: Type of Home -->
                                 <!-- Start: House Size -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">How many floors does your home have?</p><select class="rounded-4 shadow form-select" required="" name="Size of the house">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">How many floors does your home have?</p><select class="rounded-4 shadow form-select" id="homeLevel" required="" name="Home Level">
                                         <option value="" selected="">Please select and option</option>
                                         <option value="1">1 Story</option>
                                         <option value="2">2 Stories</option>
@@ -90,7 +91,7 @@
                                 </div><!-- End: House Size -->
                                 <!-- Start: House Size -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What is the approximate size of your home?</p><select class="rounded-4 shadow form-select" required="" name="Size of the house">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What is the approximate size of your home?</p><select class="rounded-4 shadow form-select" id="homeSize" required="" name="Size of the house">
                                         <option value="" selected="">Please select and option</option>
                                         <option value="1">Up to 100 sq. meters</option>
                                         <option value="2">101 - 300 sq. meters</option>
@@ -104,11 +105,11 @@
                                 <h2 class="text-center" style="font-weight: bold;">Section 2: Your Safety &amp; Peace of Mind</h2><!-- End: SECTION 2 -->
                                 <!-- Start: Current Security Level -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">On a scale of 1-10, how secure do you feel at home?</p><input class="rounded-4 shadow form-control" type="number" id="numberInput" name="Home security safeness level" min="1" max="10" step="1" placeholder="(1) Very vulnerable → (10) Completely secure" required="true" value="numberInput">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">On a scale of 1-10, how secure do you feel at home?</p><input class="rounded-4 shadow form-control" type="number" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="numberInput" name="Home security safeness level" min="1" max="10" step="1" placeholder="(1) Very vulnerable → (10) Completely secure" required="true" value="numberInput" data-bs-trigger="manual" title="Please input from 1-10">
                                 </div><!-- End: Current Security Level -->
                                 <!-- Start: Security Worry -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What's your biggest security worry right now?</p><select class="rounded-4 shadow form-select" required="" name="Security Priority">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What's your biggest security worry right now?</p><select class="rounded-4 shadow form-select" id="safetyPriority" required="" name="Security Priority">
                                         <option value="" selected="">Please select and option</option>
                                         <option value="1">Break-ins/theft prevention</option>
                                         <option value="2">Monitoring when away/traveling</option>
@@ -119,17 +120,18 @@
                                 </div><!-- End: Security Worry -->
                                 <!-- Start: Current Security Sytem -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which vision of security feels most right for you?</p><select class="rounded-4 shadow form-select" required="" name="Smart home feature">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which vision of security feels most right for you?</p><select class="rounded-4 shadow form-select" id="safetyRequirement" required="" name="safetyRequirement">
                                         <option value="" selected="">Please select and option</option>
                                         <option value="1">Only the essentials</option>
+                                        <option value="5">Monitoring my property inside my rooom</option>
                                         <option value="2">Professional monitoring to watch my home when I'm away</option>
                                         <option value="3">I want my peace of mind for a complete home safety coverage</option>
-                                        <option value="">I'd like to know your expert guided solution</option>
+                                        <option value="4">I'd like to know your expert guided solution</option>
                                     </select>
                                 </div><!-- End: Current Security Sytem -->
                                 <!-- Start: Home Security Coverage -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What type of safety coverage do you need?</p><select class="rounded-4 shadow form-select" required="" name="Smart home feature">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What type of safety coverage do you need?</p><select class="rounded-4 shadow form-select" id="safetyCoverage" required="" name="Safety Coverage">
                                         <option value="" selected="">Please select and option</option>
                                         <option value="1">Indoor</option>
                                         <option value="2">Outdoor</option>
@@ -138,7 +140,7 @@
                                 </div><!-- End: Home Security Coverage -->
                                 <!-- Start: Additional Security Features -->
                                 <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What do you think we can do more for your safety?</p><textarea class="rounded-4 shadow form-control" name="Home security additional feature" placeholder="We'd love to know more features that you want on home safety" maxlength="300"></textarea>
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What do you think we can do more for your safety?</p><textarea class="rounded-4 shadow form-control" id="homeSecurityAdiitionalFeature" name="Home security additional feature" placeholder="We'd love to know more features that you want on home safety" maxlength="300"></textarea>
                                 </div><!-- End: Additional Security Features -->
                             </div><!-- End: SECTION 2 -->
                             <!-- Start: SECTION 3 -->
@@ -147,16 +149,19 @@
                                 <h2 class="text-center" style="font-weight: bold;">Section 3: Your Ideal Smart Home</h2><!-- End: SECTION 3 -->
                                 <!-- Start: Smart Home Feature -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which smart living experience calls to you?</p><select class="rounded-4 shadow form-select" required="" name="Smart home feature">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which smart living experience calls to you?</p><select class="rounded-4 shadow form-select" id="smartHomeFeature" required="" name="Smart home feature">
                                         <option value="" selected="">Please select and option</option>
+                                        <option value="6">I want to start small and grow my smart home as I see fit</option>
                                         <option value="1">I'm tired of searching for keys and worrying if I locked the door. I want keyless entry</option>
+                                        <option value="5">Easy entry with a tap of a button for my car entrance</option>
                                         <option value="2">I want my entire home to be fully smart</option>
                                         <option value="3">I would like to talk my smart home vision with the experts</option>
+                                        <option value="4">I would like to focus on my home security first</option>
                                     </select>
                                 </div><!-- End: Smart Home Feature -->
                                 <!-- Start: Additional Smart Home Features -->
                                 <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What features would to see more in your smart home?</p><textarea class="rounded-4 shadow form-control" name="Smart home additional feature" placeholder="We'd love to know more features that you want on your home" maxlength="300"></textarea>
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What features would to see more in your smart home?</p><textarea class="rounded-4 shadow form-control" id="smartHomeAddtionalFeature" name="Smart home additional feature" placeholder="We'd love to know more features that you want on your home" maxlength="300"></textarea>
                                 </div><!-- End: Additional Smart Home Features -->
                             </div><!-- End: SECTION 3 -->
                             <!-- Start: SECTION 4 -->
@@ -165,19 +170,19 @@
                                 <h2 class="text-center" style="font-weight: bold;">Section 4: Let's Make It Happen</h2><!-- End: SECTION 4 -->
                                 <!-- Start: Homeowner information -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">How can we reach you with your FREE personalized plan?</p><input class="rounded-4 shadow form-control" type="email" id="emailAddress" name="Email Address" placeholder="Email Address" required="" minlength="5" maxlength="48"><input class="rounded-4 shadow form-control mt-3 mb-0" type="tel" name="Contact Number" placeholder="Phone / Telephone Number" minlength="3" maxlength="15">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">How can we reach you with your FREE personalized plan?</p><input class="rounded-4 shadow form-control" type="email" id="emailAddress" name="Email Address" placeholder="Email Address" required="" minlength="5" maxlength="48"><input class="rounded-4 shadow form-control mt-3 mb-0" type="tel" id="contactNumber" name="Contact Number" placeholder="Phone / Telephone Number" minlength="3" maxlength="15">
                                 </div><!-- End: Homeowner information -->
                                 <!-- Start: Homeowner Address -->
                                 <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Would you like an free onsite consultation? What is your address?</p><input class="rounded-4 shadow form-control" type="text" id="name-3" placeholder="Home Address (optional but recommended)" name="Home Address" minlength="2" maxlength="50" pattern="^[a-zA-Z -]+$">
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Would you like an free onsite consultation? What is your address?</p><input class="rounded-4 shadow form-control" type="text" id="HomeAddress" placeholder="Home Address (optional but recommended)" name="Home Address" minlength="2" maxlength="50" pattern="^[a-zA-Z -]+$">
                                 </div><!-- End: Homeowner Address -->
                                 <!-- Start: Struggle in Implementation -->
                                 <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What's the main thing stopping you from securing your home today?</p><textarea class="rounded-4 shadow form-control" name="Pain points additional" placeholder="Please let us know to better provide your needs" maxlength="300"></textarea>
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What's the main thing stopping you from securing your home today?</p><textarea class="rounded-4 shadow form-control" id="painPoints" name="Pain points additional" placeholder="Please let us know to better provide your needs" maxlength="300"></textarea>
                                 </div><!-- End: Struggle in Implementation -->
                                 <!-- Start: Homeowner Feedback -->
                                 <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Finally, what where you hoping I could help more to achieve your dream home?</p><textarea class="rounded-4 shadow form-control" name="Dream home additional comments" placeholder="What can we provide more that are not mentioned in the form" maxlength="300"></textarea>
+                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Finally, what where you hoping I could help more to achieve your dream home?</p><textarea class="rounded-4 shadow form-control" id="additionalComments" name="Dream home additional comments" placeholder="What can we provide more that are not mentioned in the form" maxlength="300"></textarea>
                                 </div><!-- End: Homeowner Feedback -->
                             </div><!-- End: SECTION 4 -->
                             <!-- Start: SEND MY PLAN NOW -->
@@ -237,7 +242,8 @@
     <script src="assets/bootstrap/js/bootstrap.min.js?h=2cf0875e1daf356bc4e64c053e7a4150"></script>
     <script src="assets/js/aos.min.js?h=d3718e34eeb0355be8e3179a2e2bccb7"></script>
     <script src="assets/js/smart-forms.min.js?h=e020daad4628441515be04aa856e08f4"></script>
-    <script src="assets/js/bs-init.js?h=67ee20cf4e5150919853fca3720bbf0d"></script>
+    <script src="assets/js/bs-init.js?h=f4a357b7fedbb728fe5b36ff19889656"></script>
+    <script src="assets/js/form-validation.js?h=2045c95c7c4fc340f9fba3082f33a1fa"></script>
     <script src="assets/js/hide-navbar-button.js?h=bac3c6d6393c95e374cffa60d0357c09"></script>
     <script src="assets/js/startup-modern.js?h=f6cae8c8da43857661afe3f8fd6bca91"></script>
 </body>
