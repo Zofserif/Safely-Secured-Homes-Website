@@ -53,7 +53,7 @@
       };
 
       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
-        .then(() => { statusEl.textContent = 'Confirmation sent. Please check your inbox.'; })
+        .then(() => { statusEl.textContent = 'Confirmation sent. Please check your inbox. Your personalized consultation is on the way'; })
         .catch(err => {
           console.error('[EmailJS] send failed:', err);
           statusEl.textContent = 'We could not send the confirmation email. Please check your spam or try again later.';
