@@ -24,9 +24,10 @@
     <link rel="icon" type="image/png" sizes="16x17" href="assets/img/Logo/Favicon/Faveicon%2032x32.png?h=fe50d6c0856bfed73085ad751e8b2874">
     <link rel="icon" type="image/png" sizes="16x17" href="assets/img/Logo/Favicon/Faveicon%2032x32.png?h=fe50d6c0856bfed73085ad751e8b2874" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=2b9089ac3d02cc1e1b2f6684859260ec">
-    <link rel="stylesheet" href="assets/css/Raleway.css?h=2385dc3c39a4405932a9117aa039c5e5">
-    <link rel="stylesheet" href="assets/css/bss-overrides.css?h=9dc6ec85e8aa51fb1213d2ff929019eb">
+    <link rel="stylesheet" href="assets/css/Raleway.css?h=4922f1f9bbb653127fc842060bdac8d2">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css?h=f956cff5eacf6fff848b588e24dab0cd">
     <link rel="stylesheet" href="assets/css/aos.min.css?h=ea67d3638a91cd05d22f1b4e31c7b746">
+    <link rel="stylesheet" href="assets/css/animation.css?h=975bfaa69f91524f6c82537a4ca0082b">
     <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
     <link rel="stylesheet" href="assets/css/validation-form.css?h=d24997260d47d48aed4a6a559838294f">
 <!-- Google tag (gtag.js) -->
@@ -51,156 +52,409 @@
     </nav><!-- End: Navbar Centered Links -->
     <!-- Start: FORM PAGE -->
     <section class="mt-5 py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="zoom-in" data-aos-duration="750" style="width: 600px;">
-                    <h2 class="display-6 fw-bold mb-4">Your FREE, Personalized "Smart &amp; Safe Home"&nbsp;<span class="underline">Plan</span></h2>
-                    <p class="text-muted">In just 60 seconds, this confidential questionnaire will help us understand your unique home safety and comfort needs. Based on your answers, our experts will create a no-obligation, custom plan to transform your house into the smart, secure, and peaceful home you deserve. Let's get started!</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6" style="width: 600px;">
-                    <div>
-                        <!-- Start: FORM AREA -->
-                        <form class="p-3 p-xl-4" id="myForm" data-bs-theme="light" data-bss-redirect-url="thank-you.html" data-bss-recipient="775aee6d493e23e8a1198b43341b02bb">
-                            <!-- Start: SECTION 1 -->
-                            <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1350" data-aos-once="true">
-                                <!-- Start: SECTION 1 -->
-                                <h2 class="text-center" style="font-weight: bold;">Section 1: Your Home &amp; Lifestyle</h2><!-- End: SECTION 1 -->
-                                <!-- Start: Name Input -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">To provide you with the best plan, may we know your name?</p><!-- Start: Full Name -->
-                                    <div class="text-start w-100">
-                                        <!-- Start: First Name -->
-                                        <div class="d-inline-block w-auto ps-2 pe-2 mb-2 invalid-feedback"><input class="rounded-4 shadow form-control js-name" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="firstName" placeholder="First Name" name="Homeowner's First Name" required="" minlength="2" maxlength="40" title="Please enter your first name" data-bs-trigger="manual" pattern="^[A-Za-z]+(?:[ '-][A-Za-z]+)*$"></div><!-- End: First Name -->
-                                        <!-- Start: Last Name -->
-                                        <div class="d-inline-block w-auto ps-2 pe-2 mb-2"><input class="rounded-4 shadow form-control js-name" type="text" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="lastName" placeholder="Last Name" name="Homeowner's Last Name" required="" minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÿ\s'-]" title="Please enter your last name" data-bs-trigger="manual"></div><!-- End: Last Name -->
-                                    </div><!-- End: Full Name -->
-                                </div><!-- End: Name Input -->
-                                <!-- Start: Type of Home -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which best describes your home situation?</p><select class="rounded-4 shadow form-select" id="homeType" required="" name="Type of House to work with" title="Please select an option" data-bs-trigger="manual">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="1">Condominium or apartment</option>
-                                        <option value="2">Busy area with high foot traffic</option>
-                                        <option value="3">Quiet neighborhood with distant neighbors</option>
-                                        <option value="4">Gated community/subdivision</option>
-                                        <option value="5">Private, secluded property</option>
-                                        <option value="6">Resthouse/ Villa</option>
-                                    </select>
-                                </div><!-- End: Type of Home -->
-                                <!-- Start: House Size -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">How many floors does your home have?</p><select class="rounded-4 shadow form-select" id="homeLevel" required="" name="Home Level">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="1">1 Story</option>
-                                        <option value="2">2 Stories</option>
-                                        <option value="3">3+ Stories</option>
-                                    </select>
-                                </div><!-- End: House Size -->
-                                <!-- Start: House Size -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What is the approximate size of your home?</p><select class="rounded-4 shadow form-select" id="homeSize" required="" name="Size of the house">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="1">Up to 100 sq. meters</option>
-                                        <option value="2">101 - 300 sq. meters</option>
-                                        <option value="3">301+ sq. meters</option>
-                                    </select>
-                                </div><!-- End: House Size -->
-                            </div><!-- End: SECTION 1 -->
-                            <!-- Start: SECTION 2 -->
-                            <div class="mt-0 pt-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1350" data-aos-once="true">
-                                <!-- Start: SECTION 2 -->
-                                <h2 class="text-center" style="font-weight: bold;">Section 2: Your Safety &amp; Peace of Mind</h2><!-- End: SECTION 2 -->
-                                <!-- Start: Current Security Level -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">On a scale of 1-10, how secure do you feel at home?</p><input class="rounded-4 shadow form-control" type="number" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="numberInput" name="Home security safeness level" min="1" max="10" step="1" placeholder="(1) Very vulnerable → (10) Completely secure" required="true" value="numberInput" data-bs-trigger="manual" title="Please input from 1-10">
-                                </div><!-- End: Current Security Level -->
-                                <!-- Start: Security Worry -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What's your biggest security worry right now?</p><select class="rounded-4 shadow form-select" id="safetyPriority" required="" name="Security Priority">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="1">Break-ins/theft prevention</option>
-                                        <option value="2">Monitoring when away/traveling</option>
-                                        <option value="3">Family safety (kids, elderly, pets)</option>
-                                        <option value="4">Package/vehicle security</option>
-                                        <option value="5">General peace of mind</option>
-                                    </select>
-                                </div><!-- End: Security Worry -->
-                                <!-- Start: Current Security Sytem -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which vision of security feels most right for you?</p><select class="rounded-4 shadow form-select" id="safetyRequirement" required="" name="safetyRequirement">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="1">Only the essentials</option>
-                                        <option value="5">Monitoring my property inside my rooom</option>
-                                        <option value="2">Professional monitoring to watch my home when I'm away</option>
-                                        <option value="3">I want my peace of mind for a complete home safety coverage</option>
-                                        <option value="4">I'd like to know your expert guided solution</option>
-                                    </select>
-                                </div><!-- End: Current Security Sytem -->
-                                <!-- Start: Home Security Coverage -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What type of safety coverage do you need?</p><select class="rounded-4 shadow form-select" id="safetyCoverage" required="" name="Safety Coverage">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="1">Indoor</option>
-                                        <option value="2">Outdoor</option>
-                                        <option value="3">Both indoor and outdoor</option>
-                                    </select>
-                                </div><!-- End: Home Security Coverage -->
-                                <!-- Start: Additional Security Features -->
-                                <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What do you think we can do more for your safety?</p><textarea class="rounded-4 shadow form-control" id="homeSecurityAdiitionalFeature" name="Home security additional feature" placeholder="We'd love to know more features that you want on home safety" maxlength="300"></textarea>
-                                </div><!-- End: Additional Security Features -->
-                            </div><!-- End: SECTION 2 -->
-                            <!-- Start: SECTION 3 -->
-                            <div class="pt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-                                <!-- Start: SECTION 3 -->
-                                <h2 class="text-center" style="font-weight: bold;">Section 3: Your Ideal Smart Home</h2><!-- End: SECTION 3 -->
-                                <!-- Start: Smart Home Feature -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Which smart living experience calls to you?</p><select class="rounded-4 shadow form-select" id="smartHomeFeature" required="" name="Smart home feature">
-                                        <option value="" selected="">Please select and option</option>
-                                        <option value="6">I want to start small and grow my smart home as I see fit</option>
-                                        <option value="1">I'm tired of searching for keys and worrying if I locked the door. I want keyless entry</option>
-                                        <option value="5">Easy entry with a tap of a button for my car entrance</option>
-                                        <option value="2">I want my entire home to be fully smart</option>
-                                        <option value="3">I would like to talk my smart home vision with the experts</option>
-                                        <option value="4">I would like to focus on my home security first</option>
-                                    </select>
-                                </div><!-- End: Smart Home Feature -->
-                                <!-- Start: Additional Smart Home Features -->
-                                <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What features would to see more in your smart home?</p><textarea class="rounded-4 shadow form-control" id="smartHomeAddtionalFeature" name="Smart home additional feature" placeholder="We'd love to know more features that you want on your home" maxlength="300"></textarea>
-                                </div><!-- End: Additional Smart Home Features -->
-                            </div><!-- End: SECTION 3 -->
-                            <!-- Start: SECTION 4 -->
-                            <div class="pt-4 pb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-                                <!-- Start: SECTION 4 -->
-                                <h2 class="text-center" style="font-weight: bold;">Section 4: Let's Make It Happen</h2><!-- End: SECTION 4 -->
-                                <!-- Start: Homeowner information -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">How can we reach you with your FREE personalized plan?</p><input class="rounded-4 shadow form-control" type="email" id="emailAddress" name="Email Address" placeholder="Email Address" required="" minlength="5" maxlength="48"><input class="rounded-4 shadow form-control mt-3 mb-0" type="tel" id="contactNumber" name="Contact Number" placeholder="Phone / Telephone Number" minlength="3" maxlength="15">
-                                </div><!-- End: Homeowner information -->
-                                <!-- Start: Homeowner Address -->
-                                <div class="mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Would you like an free onsite consultation? What is your address?</p><input class="rounded-4 shadow form-control" type="text" id="HomeAddress" placeholder="Home Address (optional but recommended)" name="Home Address" minlength="2" maxlength="50" pattern="^[a-zA-Z -]+$">
-                                </div><!-- End: Homeowner Address -->
-                                <!-- Start: Struggle in Implementation -->
-                                <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">What's the main thing stopping you from securing your home today?</p><textarea class="rounded-4 shadow form-control" id="painPoints" name="Pain points additional" placeholder="Please let us know to better provide your needs" maxlength="300"></textarea>
-                                </div><!-- End: Struggle in Implementation -->
-                                <!-- Start: Homeowner Feedback -->
-                                <div class="rounded-4 shadow-sm mb-3">
-                                    <p class="mt-0 pt-1 mb-0 pb-0" style="color: var(--bs-dark);">Finally, what where you hoping I could help more to achieve your dream home?</p><textarea class="rounded-4 shadow form-control" id="additionalComments" name="Dream home additional comments" placeholder="What can we provide more that are not mentioned in the form" maxlength="300"></textarea>
-                                </div><!-- End: Homeowner Feedback -->
-                            </div><!-- End: SECTION 4 -->
-                            <!-- Start: SEND MY PLAN NOW -->
-                            <div><button class="btn btn-primary rounded-4 shadow w-100 d-block" type="submit">SEND MY PLAN NOW</button></div><!-- End: SEND MY PLAN NOW -->
-                            <div><small class="d-flex w-100 justify-content-center mt-2">Bonus included PDF: "5 Must-Have Secrets for a Smarter, Safer Home."</small></div>
-                        </form><!-- End: FORM AREA -->
-                    </div>
-                </div>
-            </div>
+        <div class="container vh-100 py-5">
+            <!-- Start: FORM AREA -->
+            <form class="p-3 p-xl-4 mt-10" id="myForm" data-bs-theme="light" data-bss-redirect-url="thank-you.html" data-bss-recipient="775aee6d493e23e8a1198b43341b02bb"><!-- PROGRESS -->
+<div class="mb-3">
+  <div class="progress mb-5" role="progressbar" aria-label="Progress">
+    <div id="progressBar" class="progress-bar" style="width: 5%"></div>
+  </div>
+</div>
+
+<!-- Hidden scoring fields for CRM/Smart Form -->
+<input type="hidden" name="lead_score" id="lead_score">
+<input type="hidden" name="lead_tier" id="lead_tier">
+<input type="hidden" name="auto_notes" id="auto_notes">
+
+<!-- STEP 0: Welcome -->
+<section class="form-step" data-step="0" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold mb-3">Let’s shape a plan around your home and routines.</h2>
+  <p class="text-muted text-center mb-4">A few quick taps so we can map the right views (and avoid guesswork later).</p>
+  <button type="button" class="btn btn-primary rounded-4 shadow w-100" data-next>Start</button>
+</section>
+
+<!-- STEP 1: Home type -->
+<section class="form-step d-none" data-step="1" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">“Our place is a…”</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="property_type" required>
+      <option value="" selected>Please select an option</option>
+      <option>Single-family house</option>
+      <option>Townhouse / Duplex</option>
+      <option>Condo / Apartment</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 1.5: Lot Size -->
+<section class="form-step d-none" data-step="2" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">“My current home size is...”</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="floors" required>
+      <option value="" selected>Please select an option</option>
+      <option>Small (≦120 sqm lot)</option>
+      <option>Medium (121-250 sqm)</option>
+      <option>Large (251-450 sqm)</option>
+      <option>Large (451+ sqm)</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 2: Floors -->
+<section class="form-step d-none" data-step="2" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">“…with how many floors?”</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="floors" required>
+      <option value="" selected>Please select an option</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3+</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 3: Neighborhood -->
+<section class="form-step d-none" data-step="3" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">“We’re in a neighborhood that’s…”</h2>
+
+  <!-- at least 1 required -->
+  <div class="mb-3" data-minchecked="1">
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Gated village with guards" id="nb1"><label class="form-check-label" for="nb1">Gated village with guards</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Open street frontage" id="nb2"><label class="form-check-label" for="nb2">Open front facing the street</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Corner lot" id="nb3"><label class="form-check-label" for="nb3">Corner lot</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Side alley/gate access" id="nb4"><label class="form-check-label" for="nb4">Access through side alley or gate</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Not sure" id="nb5"><label class="form-check-label" for="nb5">Not sure</label></div>
+
+    <div class="invalid-feedback d-block" style="display:none;">Please select at least one.</div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 4: Home stage -->
+<section class="form-step d-none" data-step="4" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">"My home situtation is..”</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="home_stage" required>
+      <option value="" selected>Please select an option</option>
+      <option>Newly moved (≤6 months)</option>
+      <option>New build / renovation</option>
+      <option>Existing home</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 5: Goals -->
+<section class="form-step d-none" data-step="5" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">When you think “security”, what do you want handled?</h2>
+
+  <!-- at least 1 required -->
+  <div class="mb-3" data-minchecked="1">
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="goals[]" value="Deter intruders" id="g1"><label class="form-check-label" for="g1">Keep intruders away</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="goals[]" value="See visitors & deliveries" id="g2"><label class="form-check-label" for="g2">See visitors & deliveries</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="goals[]" value="Protect cars/garage" id="g3"><label class="form-check-label" for="g3">Protect cars/garage</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="goals[]" value="Watch backyard/pets/pool" id="g4"><label class="form-check-label" for="g4">Watch backyard/pets/pool</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="goals[]" value="Keep an eye on elderly/kid" id="g5"><label class="form-check-label" for="g5">Keep an eye on kid/elderly</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="goals[]" value="Peace of mind when away" id="g6"><label class="form-check-label" for="g6">Peace of mind when away</label></div>
+
+    <div class="invalid-feedback d-block" style="display:none;">Please select at least one.</div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 6: Risk window -->
+<section class="form-step d-none" data-step="6" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">When do you care most about coverage?</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="risk_window" required>
+      <option value="" selected>Please select an option</option>
+      <option>Night</option>
+      <option>Day</option>
+      <option>When I'm traveling</option>
+      <option>24/7</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 7: Priority areas -->
+<section class="form-step d-none" data-step="7" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">Show us where eyes would help. (choose all that fit)</h2>
+
+  <!-- at least 1 required -->
+  <div class="mb-3" data-minchecked="1">
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Front door/porch" id="pa1"><label class="form-check-label" for="pa1">Front door/porch</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Gate/Driveway" id="pa2"><label class="form-check-label" for="pa2">Gate/Driveway</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Garage interior" id="pa3"><label class="form-check-label" for="pa3">Garage interior</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Backyard/Patio" id="pa4"><label class="form-check-label" for="pa4">Backyard/Patio</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Side gates/Fence line" id="pa5"><label class="form-check-label" for="pa5">Side gates/Fence line</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Street view/Plates" id="pa6"><label class="form-check-label" for="pa6">Street view/Plates</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Main hall/Living (indoor)" id="pa7"><label class="form-check-label" for="pa7">Main hall/Living (indoor)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Whole perimeter (360°)" id="pa8"><label class="form-check-label" for="pa8">Whole perimeter (360°)</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Not sure—guide us" id="pa9"><label class="form-check-label" for="pa9">Not sure—guide us</label></div>
+
+    <div class="invalid-feedback d-block" style="display:none;">Please select at least one.</div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 8: Night lighting -->
+<section class="form-step d-none" data-step="8" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold mb-1">At night, your outdoor lighting feels…</h2>
+  <!-- <p class="text-muted text-center mb-3">Clear color at night = better IDs. We’ll factor ColorVu/spotlight where it helps—no floodlights needed everywhere.</p> -->
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="night_lighting" required>
+      <option value="" selected>Please select an option</option>
+      <option>Good</option>
+      <option>Okay</option>
+      <option>Pretty dark</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 9: Current setup -->
+<section class="form-step d-none" data-step="9" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">My Current Setup is...</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="current_setup" required>
+      <option value="" selected>Please select an option</option>
+      <option>No Security System</option>
+      <option>Old System, needs maintenance/replacement</option>
+      <option>Ready for future-proofing and quality upgrades</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 9.5: Safety level -->
+<section class="form-step d-none" data-step="10" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">My current home safety level is...</h2>
+
+  <div class="mb-3">
+    <div class="d-flex justify-content-between small text-muted mb-1">
+      <span>1 — Vulnerable</span>
+      <span>10 — Completely Safe</span>
+    </div>
+
+    <input
+      class="form-range"
+      type="range"
+      name="safety_level"
+      id="safety_level"
+      min="1"
+      max="10"
+      step="1"
+      value="5"
+      required
+      aria-describedby="safetyHelp"
+    >
+
+    <div class="text-center mt-2">
+      <span class="badge rounded-pill text-bg-primary" id="safetyBadge">5 / 10</span>
+    </div>
+
+    <!-- <div id="safetyHelp" class="form-text text-muted">
+      1 Vulnerable — 10 Completely Safe
+    </div> -->
+    <div class="invalid-feedback">Please choose a value from 1 to 10.</div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+
+<!-- STEP 10: Must-haves (limit 3) -->
+<section class="form-step d-none" data-step="10" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold mb-1">If you had to pick a few “must-haves”, which feel right?</h2>
+  <p class="text-muted text-center mb-3">Pick up to 3</p>
+
+  <!-- at least 1 required, max 3 -->
+  <div class="mb-3" data-minchecked="1" data-maxchecked="3">
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Color at night (ColorVu)" id="fm1"><label class="form-check-label" for="fm1">Colored night recording</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Human/vehicle alerts (AcuSense)" id="fm2"><label class="form-check-label" for="fm2">Human/vehicle alerts</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Talk/spotlight deterrence" id="fm3"><label class="form-check-label" for="fm3">Talk and listen</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Hik-Connect app" id="fm4"><label class="form-check-label" for="fm4">Phone monitoring access</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="24/7 recording" id="fm5"><label class="form-check-label" for="fm5">24/7 recording</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Motion-only recording" id="fm6"><label class="form-check-label" for="fm6">Motion-only recording</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="30+ days storage" id="fm7"><label class="form-check-label" for="fm7">30+ days storage</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Monitoring station (with monitor)" id="fm7"><label class="form-check-label" for="fm7">Designated monitoring station</label></div>
+
+    <div class="invalid-feedback d-block" style="display:none;">Please select at least one (max 3).</div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 11: Notifications -->
+<section class="form-step d-none" data-step="11" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">About alerts… notify me when there’s:</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="notifications" required>
+      <option value="" selected>Please select an option</option>
+      <option>Person/vehicle only</option>
+      <option>Any motion</option>
+      <option>No notification</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 12: Smart home interest -->
+<section class="form-step d-none" data-step="12" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">Would you like your home to be future ready?</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select"
+        name="smart_home_interest"
+        id="smart_home_interest"
+        required
+        data-freeinput-on="Maybe later|Not now"
+        data-freeinput-placeholder="What would be the main thing stopping you from a smart home-ready future?">
+  <option value="" selected>Please select an option</option>
+  <option>Yes</option>
+  <option>Maybe later</option>
+  <option>Not now</option>
+</select>
+
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 13: Budget -->
+<section class="form-step d-none" data-step="13" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">For the right fit (device + professional install), our comfort zone is…</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="budget_band" required>
+      <option value="" selected>Please select an option</option>
+      <option>Basic Starter level - Only the fundamentals of security</option>
+      <option>All I can need level - Most bang for your buck</option>
+      <option>Feature Rich level - Most recommended for security</option>
+      <option>Everything to be Safely Secured Homes Certified!</option>
+      <option>Not sure, I want onsite consultation for my needs</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 14: Timing + Decision -->
+<section class="form-step d-none" data-step="14" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">When would you like this done?</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="timeline" required>
+      <option value="" selected>Please select an option</option>
+      <option>ASAP</option>
+      <option>This week</option>
+      <option>This month</option>
+      <option>1–3 months</option>
+      <option>Exploring</option>
+    </select>
+  </div>
+  <h2 class="text-center fw-bold mt-3">Decision-making looks like…</h2>
+  <div class="mb-3">
+    <select class="rounded-4 shadow form-select" name="decision_makers" required>
+      <option value="" selected>Please select an option</option>
+      <option>Me</option>
+      <option>Me + family</option>
+      <option>Home Owner Association/Landlord</option>
+    </select>
+  </div>
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 15: Incidents + Photos (optional) -->
+<section class="form-step d-none" data-step="15" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">Anything recent we should factor in? (optional)</h2>
+  <textarea class="rounded-4 shadow form-control mb-3" name="incident_notes" maxlength="300" placeholder="e.g., prowler at 2 AM, package theft, pets near the fence…"></textarea>
+  <label class="form-label">Snap & share a quick photo (front/driveway/backyard) – optional</label>
+  <input class="rounded-4 shadow form-control" type="file" name="photos" accept="image/*" multiple>
+  <div class="d-flex gap-2 mt-3">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+
+<!-- STEP 15.5: Additional Question -->
+<section class="form-step d-none" data-step="15" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">Finally, what were you hoping we could help to achieve your dream home?</h2>
+  <textarea class="rounded-4 shadow form-control mb-3" name="incident_notes" maxlength="300" placeholder="e.g. I would like an automatic gate for my garage, I want an intercom device"></textarea>
+  <div class="d-flex gap-2 mt-3">
+    <button type="button" class="btn btn-outline-secondary rounded-4 w-50" data-prev>Back</button>
+    <button type="button" class="btn btn-primary rounded-4 w-50" data-next>Next</button>
+  </div>
+</section>
+
+<!-- STEP 16: Contact + Submit -->
+<section class="form-step d-none" data-step="16" data-aos="fade-up" data-aos-duration="1000">
+  <h2 class="text-center fw-bold">So we can send your FREE personalized plan</h2>
+  <div class="mb-3">
+    <input class="rounded-4 shadow form-control mb-2" type="text" name="full_name" placeholder="Full Name" required minlength="2" maxlength="60">
+    <input class="rounded-4 shadow form-control mb-2" type="email" name="email" placeholder="Email Address" required minlength="5" maxlength="80">
+    <input class="rounded-4 shadow form-control mb-2" type="tel" name="mobile" placeholder="+63 or 09xxxxxxxxx" pattern="^(\+?63|0)9\d{9}$" required>
+    <div class="form-check mt-2">
+      <input class="form-check-input" type="checkbox" id="consent" required>
+      <label class="form-check-label" for="consent">I agree to be contacted about my plan.</label>
+    </div>
+  </div>
+  <button class="btn btn-primary rounded-4 shadow w-100 d-block" type="submit">SEND MY PLAN NOW</button>
+  <div><small class="d-flex w-100 justify-content-center mt-2">Bonus included PDF: "5 Must-Have Secrets for a Smarter, Safer Home."</small></div>
+</section>
+</form><!-- End: FORM AREA -->
         </div>
     </section><!-- End: FORM PAGE -->
     <!-- Start: Footer Multi Column -->
@@ -251,8 +505,8 @@
     <script src="assets/bootstrap/js/bootstrap.min.js?h=2cf0875e1daf356bc4e64c053e7a4150"></script>
     <script src="assets/js/aos.min.js?h=d3718e34eeb0355be8e3179a2e2bccb7"></script>
     <script src="assets/js/smart-forms.min.js?h=e020daad4628441515be04aa856e08f4"></script>
-    <script src="assets/js/bs-init.js?h=f4a357b7fedbb728fe5b36ff19889656"></script>
-    <script src="assets/js/form-validation.js?h=8ec255774b54f37efaad6cecc7710c5d"></script>
+    <script src="assets/js/bs-init.js?h=67ee20cf4e5150919853fca3720bbf0d"></script>
+    <script src="assets/js/form-validation.js?h=c83fc1cca8677b5d7fbe8b8d5edc46f4"></script>
     <script src="assets/js/hide-navbar-button.js?h=bac3c6d6393c95e374cffa60d0357c09"></script>
     <script src="assets/js/startup-modern.js?h=f6cae8c8da43857661afe3f8fd6bca91"></script>
 </body>

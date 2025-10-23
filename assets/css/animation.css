@@ -1,0 +1,118 @@
+/* Elegant step transitions (lightweight, theme-safe) */
+
+:root {
+  --step-anim-ms: 360ms;
+  --step-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --step-scale: 0.985;
+  --step-shift: 10px;
+}
+
+.form-step {
+  will-change: transform, opacity;
+}
+
+.form-step.animating {
+  pointer-events: none;
+}
+
+/* Forward (Next) — content gently lifts in, outgoing slides up a touch */
+
+.form-step.anim-in-next {
+  animation: step-in-next var(--step-anim-ms) var(--step-ease) both;
+}
+
+.form-step.anim-out-next {
+  animation: step-out-next var(--step-anim-ms) var(--step-ease) both;
+}
+
+/* Back (Prev) — mirror motion, just reversed direction */
+
+.form-step.anim-in-prev {
+  animation: step-in-prev var(--step-anim-ms) var(--step-ease) both;
+}
+
+.form-step.anim-out-prev {
+  animation: step-out-prev var(--step-anim-ms) var(--step-ease) both;
+}
+
+/* Keyframes — transform+opacity only (GPU-safe) */
+
+@keyframes step-in-next {
+  from {
+    opacity: 0;
+    transform: translateY(var(--step-shift)) scale(var(--step-scale));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes step-out-next {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(calc(var(--step-shift) * -1)) scale(var(--step-scale));
+  }
+}
+
+@keyframes step-in-prev {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--step-shift) * -1)) scale(var(--step-scale));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes step-out-prev {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(var(--step-shift)) scale(var(--step-scale));
+  }
+}
+
+/* Accessibility: honor users who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .form-step.anim-in-next, .form-step.anim-out-next, .form-step.anim-in-prev, .form-step.anim-out-prev {
+    animation-duration: 1ms !important;
+  }
+}
+
+/* Optional: gentle shadow bloom while step is settling */
+
+.form-step.anim-in-next, .form-step.anim-in-prev {
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.02));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-step.anim-in-next, .form-step.anim-in-prev {
+    filter: none;
+  }
+}
+
+.form-step.step-enter-active {
+  animation: ssFadeUp 0.65s ease both;
+}
+
+@keyframes ssFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
