@@ -24,8 +24,8 @@
     <link rel="icon" type="image/png" sizes="16x17" href="assets/img/Logo/Favicon/Faveicon%2032x32.png?h=fe50d6c0856bfed73085ad751e8b2874">
     <link rel="icon" type="image/png" sizes="16x17" href="assets/img/Logo/Favicon/Faveicon%2032x32.png?h=fe50d6c0856bfed73085ad751e8b2874" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=2b9089ac3d02cc1e1b2f6684859260ec">
-    <link rel="stylesheet" href="assets/css/Raleway.css?h=420b6851620232189ebd46a5df0f7303">
-    <link rel="stylesheet" href="assets/css/bss-overrides.css?h=2cb1f3ebb7a06bf3bf68fe64178482c4">
+    <link rel="stylesheet" href="assets/css/Raleway.css?h=e3c7898669071ed0f1b4e171d432563e">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css?h=e7d652766992818628b89447c99ea06b">
     <link rel="stylesheet" href="assets/css/aos.min.css?h=ea67d3638a91cd05d22f1b4e31c7b746">
     <link rel="stylesheet" href="assets/css/animation.css?h=975bfaa69f91524f6c82537a4ca0082b">
     <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
@@ -52,11 +52,11 @@
     </nav><!-- End: Navbar Centered Links -->
     <!-- Start: FORM PAGE -->
     <section class="mt-5 py-5">
-        <div class="container vh-100 py-5">
+        <div class="container vh-100 pe-3 pt-3 pb-5">
             <!-- Start: FORM AREA -->
-            <form class="p-3 p-xl-4 mt-5" id="myForm" data-bs-theme="light" data-bss-redirect-url="thank-you.html" data-bss-recipient="775aee6d493e23e8a1198b43341b02bb"><!-- PROGRESS -->
+            <form class="p-3 p-xl-4 mt-0" id="myForm" data-bs-theme="light" data-bss-redirect-url="thank-you.html" data-bss-recipient="775aee6d493e23e8a1198b43341b02bb"><!-- PROGRESS -->
 <div class="mb-3">
-  <div class="progress mb-5" role="progressbar" aria-label="Progress">
+  <div class="progress mb-8" role="progressbar" aria-label="Progress">
     <div id="progressBar" class="progress-bar" style="width: 5%"></div>
   </div>
 </div>
@@ -67,7 +67,7 @@
 <input type="hidden" name="auto_notes" id="auto_notes">
 
 <!-- STEP 0: Welcome -->
-<section class="form-step" data-step="0" data-aos="fade-up" data-aos-duration="1000">
+<section class="form-step mt-10" data-step="0" data-aos="fade-up" data-aos-duration="1000">
   <h2 class="text-center fw-bold mb-3">Let’s shape a plan around your home and routines.</h2>
   <p class="text-muted text-center mb-4">A few quick taps so we can map the right views (and avoid guesswork later).</p>
   <button type="button" class="btn btn-primary rounded-4 shadow w-100" data-next>Start</button>
@@ -133,10 +133,11 @@
   <!-- at least 1 required -->
   <div class="mb-3" data-minchecked="1">
     <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Gated village with guards" id="nb1"><label class="form-check-label" for="nb1">Gated village with guards</label></div>
-    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Open street frontage" id="nb2"><label class="form-check-label" for="nb2">Open front facing the street</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Near the highway" id="nb2"><label class="form-check-label" for="nb2">Near the highway</label></div>
     <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Corner lot" id="nb3"><label class="form-check-label" for="nb3">Corner lot</label></div>
-    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Side alley/gate access" id="nb4"><label class="form-check-label" for="nb4">Access through side alley or gate</label></div>
-    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Not sure" id="nb5"><label class="form-check-label" for="nb5">Not sure</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="High foot-traffic/vehicle" id="nb4"><label class="form-check-label" for="nb4">High foot-traffic/vehicle</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Secluded area/low foot-traffic neighborhood" id="nb5"><label class="form-check-label" for="nb5">Secluded area/low foot-traffic neighborhood</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="neighborhood_context[]" value="Not sure" id="nb6"><label class="form-check-label" for="nb6">Not sure</label></div>
 
     <div class="invalid-feedback d-block" style="display:none;">Please select at least one.</div>
   </div>
@@ -218,7 +219,7 @@
     <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Street view/Plates" id="pa6"><label class="form-check-label" for="pa6">Street view/Plates</label></div>
     <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Main hall/Living (indoor)" id="pa7"><label class="form-check-label" for="pa7">Main hall/Living (indoor)</label></div>
     <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Whole perimeter (360°)" id="pa8"><label class="form-check-label" for="pa8">Whole perimeter (360°)</label></div>
-    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Not sure—guide us" id="pa9"><label class="form-check-label" for="pa9">Not sure—guide us</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="priority_areas[]" value="Not sure—guide us or comment" id="pa9"><label class="form-check-label" for="pa9">Not sure—guide us or comment</label></div>
 
     <div class="invalid-feedback d-block" style="display:none;">Please select at least one.</div>
   </div>
@@ -317,7 +318,7 @@
     <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Hik-Connect app" id="fm4"><label class="form-check-label" for="fm4">Phone monitoring access</label></div>
     <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="24/7 recording" id="fm5"><label class="form-check-label" for="fm5">24/7 recording</label></div>
     <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Motion-only recording" id="fm6"><label class="form-check-label" for="fm6">Motion-only recording</label></div>
-    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="30+ days storage" id="fm7"><label class="form-check-label" for="fm7">30+ days storage</label></div>
+    <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="30+ days storage" id="fm7"><label class="form-check-label" for="fm7">30+ days storage backlogs</label></div>
     <div class="form-check"><input class="form-check-input" type="checkbox" name="features_must[]" value="Monitoring station (with monitor)" id="fm7"><label class="form-check-label" for="fm7">Designated monitoring station</label></div>
 
     <div class="invalid-feedback d-block" style="display:none;">Please select at least one (max 3).</div>
@@ -354,7 +355,7 @@
         name="smart_home_interest"
         id="smart_home_interest"
         data-freeinput-on="Maybe later|Not now"
-        data-freeinput-placeholder="What would be the main thing stopping you from a smart home-ready future? (Optional)">
+        data-freeinput-placeholder="What would be the main thing stopping you from a smart home-ready future?">
   <option value="" selected>Please select an option</option>
   <option>Yes</option>
   <option>Maybe later</option>
@@ -378,7 +379,7 @@
       <option>All I can need level - Most bang for your buck</option>
       <option>Feature Rich level - Most recommended for security</option>
       <option>Everything to be Safely Secured Homes Certified!</option>
-      <option>Not sure, I want onsite consultation for my needs</option>
+      <option>Not sure, I want a professional recommendation based on my home needs</option>
     </select>
   </div>
   <div class="d-flex gap-2">
@@ -451,7 +452,7 @@
     </div>
   </div>
   <button class="btn btn-primary rounded-4 shadow w-100 d-block" type="submit">SEND MY PLAN NOW</button>
-  <div><small class="d-flex w-100 justify-content-center mt-2">Bonus included PDF: "5 Must-Have Secrets for a Smarter, Safer Home."</small></div>
+  <div><small class="d-flex w-100 justify-content-center mt-2">Bonus included PDF: "5 Must-Have Secrets to a Panatag Home"</small></div>
 </section>
 </form><!-- End: FORM AREA -->
         </div>
@@ -505,7 +506,7 @@
     <script src="assets/js/aos.min.js?h=d3718e34eeb0355be8e3179a2e2bccb7"></script>
     <script src="assets/js/smart-forms.min.js?h=e020daad4628441515be04aa856e08f4"></script>
     <script src="assets/js/bs-init.js?h=67ee20cf4e5150919853fca3720bbf0d"></script>
-    <script src="assets/js/form-validation.js?h=c83fc1cca8677b5d7fbe8b8d5edc46f4"></script>
+    <script src="assets/js/form-validation.js?h=a8b6686edec6a6834c7ce04a0c2b126a"></script>
     <script src="assets/js/hide-navbar-button.js?h=bac3c6d6393c95e374cffa60d0357c09"></script>
     <script src="assets/js/startup-modern.js?h=f6cae8c8da43857661afe3f8fd6bca91"></script>
 </body>

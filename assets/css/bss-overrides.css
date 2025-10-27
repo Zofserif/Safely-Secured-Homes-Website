@@ -633,6 +633,10 @@
   margin-top: 3rem !important;
 }
 
+.mt-10 {
+  margin-top: 10.5rem !important;
+}
+
 .me-0 {
   margin-right: 0 !important;
 }
@@ -659,6 +663,10 @@
 
 .mb-5 {
   margin-bottom: 3rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 7.5rem !important;
 }
 
 .ms-0 {
@@ -731,6 +739,10 @@
   padding-right: 0 !important;
 }
 
+.pe-3 {
+  padding-right: 1rem !important;
+}
+
 .pe-4 {
   padding-right: 1.5rem !important;
 }
@@ -745,6 +757,10 @@
 
 .pb-4 {
   padding-bottom: 1.5rem !important;
+}
+
+.pb-5 {
+  padding-bottom: 3rem !important;
 }
 
 .ps-0 {

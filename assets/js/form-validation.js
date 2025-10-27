@@ -799,8 +799,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function computeScore() {
     let s = 0;
 
-    const risk = getSelectVal("risk_window"); // Night/24/7/Travel often
-    if (["Night", "24/7", "Travel often", "When I'm traveling"].includes(risk))
+    const risk = getSelectVal("risk_window"); // Night/24/7/When traveling
+    if (["Night", "24/7", "When I'm traveling"].includes(risk))
       s += 2;
 
     const night = getSelectVal("night_lighting"); // Pretty dark
