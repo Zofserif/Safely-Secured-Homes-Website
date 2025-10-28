@@ -335,33 +335,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showStep(i) {
-  if (!hasWizard) return;
+    if (!hasWizard) return;
 
-  steps.forEach((s, idx) => s.classList.toggle('d-none', idx !== i));
-  current = i;
+    steps.forEach((s, idx) => s.classList.toggle("d-none", idx !== i));
+    current = i;
 
-  // Only show progress once the user leaves the welcome step
-  if (progressBar && progressWrap) {
-    if (i === 0) {
-      progressWrap.style.display = 'none';
-      progressWrap.setAttribute('aria-hidden', 'true');
-    } else {
-      progressWrap.style.display = '';
-      progressWrap.removeAttribute('aria-hidden');
-      const pct = Math.max(5, Math.round((i / (steps.length - 1)) * 100));
-      progressBar.style.width = pct + '%';
-      progressBar.setAttribute('aria-valuenow', String(pct));
+    // Only show progress once the user leaves the welcome step
+    if (progressBar && progressWrap) {
+      if (i === 0) {
+        progressWrap.style.display = "none";
+        progressWrap.setAttribute("aria-hidden", "true");
+      } else {
+        progressWrap.style.display = "";
+        progressWrap.removeAttribute("aria-hidden");
+        const pct = Math.max(5, Math.round((i / (steps.length - 1)) * 100));
+        progressBar.style.width = pct + "%";
+        progressBar.setAttribute("aria-valuenow", String(pct));
+      }
     }
+
+    try {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch {}
+    const stepEl = steps[i];
+    replayStepAnimation(stepEl);
+
+    const first = stepEl.querySelector("input, select, textarea, button");
+    if (first)
+      try {
+        first.focus({ preventScroll: false });
+      } catch {}
   }
-
-  try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch {}
-  const stepEl = steps[i];
-  replayStepAnimation(stepEl);
-
-  const first = stepEl.querySelector('input, select, textarea, button');
-  if (first) try { first.focus({ preventScroll: false }); } catch {}
-}
-
 
   function groupHelper(min, max) {
     const hasMax = Number.isFinite(max);
@@ -800,8 +804,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let s = 0;
 
     const risk = getSelectVal("risk_window"); // Night/24/7/When traveling
-    if (["Night", "24/7", "When I'm traveling"].includes(risk))
-      s += 2;
+    if (["Night", "24/7", "When I'm traveling"].includes(risk)) s += 2;
 
     const night = getSelectVal("night_lighting"); // Pretty dark
     if (night === "Pretty dark") s += 1;
@@ -935,6 +938,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (scoreEl) scoreEl.value = lead_score;
     if (tierEl) tierEl.value = lead_tier;
     if (noteEl) noteEl.value = notes;
+
+    // in form-validation.js, inside captureSubmissionValues() *after* lead_tier is computed
+    localStorage.setItem("ssh_last_tier", lead_tier);
+    localStorage.setItem("ssh_last_score", lead_score);
+
+    return { lead_score, lead_tier, email, to_name };
   }
 
   // ==================================================
@@ -959,7 +968,21 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Valid → compute & store values; allow normal submit/redirect
-    captureSubmissionValues();
+    // Valid → compute & store values, then ensure redirect carries tier/score
+    const vals = captureSubmissionValues(); // { lead_score, lead_tier, email, to_name }
+
+    // Append ?tier=&score= to data-bss-redirect-url (keeps Bootstrap Studio Smart Form flow)
+    try {
+      const current =
+        form.getAttribute("data-bss-redirect-url") || "thank-you.html";
+      const u = new URL(current, location.origin);
+      if (vals && vals.lead_tier) u.searchParams.set("tier", vals.lead_tier);
+      if (vals && vals.lead_score) u.searchParams.set("score", vals.lead_score);
+      form.setAttribute("data-bss-redirect-url", u.pathname + u.search);
+    } catch (e) {
+      /* noop */
+    }
+
+    // allow Smart Forms to proceed normally
   });
 });
