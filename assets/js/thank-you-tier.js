@@ -49,7 +49,7 @@
   // ---------- Content Config ----------
   // Replace these URLs with your real links
   var planUrl  = "/form.html";
-  var bookUrl  = "https://your-booking-link.example"; // <-- put real booking link
+  var bookUrl  = "https://calendly.com/vallarta-troy/30min"; // <-- put real booking link
   var guideUrl = "/assets/bonus/5-must-have-secrets.pdf"; // <-- put real guide link if needed
 
   var config = {
