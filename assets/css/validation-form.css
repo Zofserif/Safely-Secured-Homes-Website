@@ -1,8 +1,0 @@
-/* Don't show "valid" styling for non-required fields */
-
-.was-validated .form-control:valid:not([required]), .was-validated .form-select:valid:not([required]), .form-control.is-valid:not([required]), .form-select.is-valid:not([required]) {
-  background-image: none;
-  box-shadow: none;
-  border-color: var(--bs-border-color);
-}
-
